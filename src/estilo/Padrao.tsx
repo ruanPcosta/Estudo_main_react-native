@@ -6,10 +6,14 @@ paddingHorizontal: 15,
 marginVertical: 5,
 borderRadius: 10,
 borderWidth: 2,
-borderColor: '#222',
+borderColor: '#222222',
 fontSize: 24,
 fontWeight: 'bold',
 
+},
+
+txtG:{
+    fontSize: 32
 }
 
 })

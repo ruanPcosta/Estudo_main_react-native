@@ -6,22 +6,34 @@ import ParImpar from "./componentes/ParImpar";
 import Familia from "./componentes/Relacao/Familia";
 import Padrao from "./estilo/Padrao";
 import Membro from "./componentes/Relacao/Membro";
-
+import UsuarioLogado from "./componentes/UsuarioLogado";
 export default class App extends Component {
   render() {
     return(
-      <View style = {estilos.container}> 
+      <View style = {estilos.container}>
+        <UsuarioLogado usuario={ {nome: 'teste', email: 'teste@teste.com'}} />
+        <UsuarioLogado usuario ={ {nome: 'teste 2'}}/>
+        <UsuarioLogado usuario ={ {email: 'teste@teste.com'}} />
+        <UsuarioLogado usuario= {null}/>
+        <UsuarioLogado usuario = { {}}/>
+
     { /* <Simples texto = 'Ruan' />*/}
        {/*<Frag titulo = "Cadastro" 
-          subTitulo = "Tela de cadastro de produto" />*/ }
+          subTitulo = " Tela de cadastro de produto" />*/ }
      
     {/* <ParImpar numero = {10}  />} */}
      
-     <Familia>
+     {/*<Familia>
        <Membro nome = "Ana" sobreNome = "Silva"/>
        <Membro nome = "José" sobreNome = "Silva" />
 
-     </Familia>
+        </Familia>*/}
+
+    {/* <Familia>
+
+      <Membro nome = "Bianca" sobreNome = "Cunha"/>
+      <Membro nome = "Gustavo" sobreNome = "Cunha"/>
+      </Familia>*/}
       
       </View>
     );
@@ -36,6 +48,6 @@ const estilos = StyleSheet.create({
   },
 
   fonte: {
-    fontSize: 50,
+    fontSize: 40,
   },
 });

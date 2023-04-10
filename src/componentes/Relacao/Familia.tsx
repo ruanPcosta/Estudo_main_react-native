@@ -1,17 +1,16 @@
 import React from "react";
-import { Text } from "react-native/types";
-import Padrao from "../../estilo/Padrao";
+import { Text } from "react-native";
 
 
 
 
 
-export default (props: any) => {
+export default props => {
 
 return (
 <>
 
-      <Text style = {Padrao.txtG}>Membros da familia </Text>
+      <Text>Membros da familia </Text>
        {props.children}
 </>
 
