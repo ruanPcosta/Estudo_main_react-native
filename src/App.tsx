@@ -7,15 +7,29 @@ import Familia from "./componentes/Relacao/Familia";
 import Padrao from "./estilo/Padrao";
 import Membro from "./componentes/Relacao/Membro";
 import UsuarioLogado from "./componentes/UsuarioLogado";
+import Contador from "./componentes/Contador";
+
+import Botao from "./componentes/Botao";
 export default class App extends Component {
   render() {
     return(
       <View style = {estilos.container}>
-        <UsuarioLogado usuario={ {nome: 'teste', email: 'teste@teste.com'}} />
+      
+     {/* <Botao />
+*/}      
+      
+   <Contador valorInicial = {50} />
+      
+      
+      
+      
+      
+      
+      {/*  <UsuarioLogado usuario={ {nome: 'teste', email: 'teste@teste.com'}} />
         <UsuarioLogado usuario ={ {nome: 'teste 2'}}/>
         <UsuarioLogado usuario ={ {email: 'teste@teste.com'}} />
         <UsuarioLogado usuario= {null}/>
-        <UsuarioLogado usuario = { {}}/>
+    <UsuarioLogado usuario = { {}}/>*/}
 
     { /* <Simples texto = 'Ruan' />*/}
        {/*<Frag titulo = "Cadastro" 
