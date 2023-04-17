@@ -14,6 +14,16 @@ fontWeight: 'bold',
 
 txtG:{
     fontSize: 32
+},
+
+input:{
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    borderLeftWidth: 3,
+    borderRightWidth: 3,
 }
+
+
 
 })

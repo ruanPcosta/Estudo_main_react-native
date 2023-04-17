@@ -8,6 +8,7 @@ import Padrao from "./estilo/Padrao";
 import Membro from "./componentes/Relacao/Membro";
 import UsuarioLogado from "./componentes/UsuarioLogado";
 import Contador from "./componentes/Contador";
+import DigiteSeuNome from "./componentes/DigiteSeuNome";
 
 import Botao from "./componentes/Botao";
 export default class App extends Component {
@@ -18,9 +19,9 @@ export default class App extends Component {
      {/* <Botao />
 */}      
       
-   <Contador valorInicial = {50} />
+  {/* <Contador valorInicial = {50} />*/}
       
-      
+    <DigiteSeuNome />
       
       
       
