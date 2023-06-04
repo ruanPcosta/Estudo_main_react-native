@@ -9,21 +9,61 @@ import Membro from "./componentes/Relacao/Membro";
 import UsuarioLogado from "./componentes/UsuarioLogado";
 import Contador from "./componentes/Contador";
 import DigiteSeuNome from "./componentes/DigiteSeuNome";
-
+import DimensoesFixas from "./componentes/DimensoesFixas";
 import Botao from "./componentes/Botao";
+import Button from "./componentes/Calculadora/Button";
+import Display from "./componentes/Calculadora/Display";
 export default class App extends Component {
+  state = {
+    displayValue: '0',
+  }
+
+  clearDisplay = () => {
+    this.setState({displayValue: '0'})
+  }
+
+  setDigit = digito => {
+    this.setState({displayValue: digito})
+  }
+
+  setOperation = op => {
+
+  }
   render() {
     return(
-      <View style = {estilos.container}>
+    
+      <View style = {estilos.calculadora}>
+        <Display value = {this.state.displayValue} />
+        <View style = {estilos.botao}>
+          <Button label = 'AC' triple onClick = {() => this.clearDisplay} />
+          <Button label = '/'op onClick = {() => this.setOperation('/')}/>
+          <Button label = '7'/>
+          <Button label = '8' />
+          <Button label = '9' />
+          <Button label = '*' />
+          <Button label = '4' />
+          <Button label = '5' />
+          <Button label = '6' />
+          <Button label = '-' />
+          <Button label = '1' />
+          <Button label = '2' />
+          <Button label = '3' />
+          <Button label = '+' />
+          <Button label = '0' />
+          <Button label = '.' />
+          <Button label = '=' />
+        </View>
       
-     {/* <Botao />
-*/}      
+     {/* <Botao />*/}      
       
   {/* <Contador valorInicial = {50} />*/}
       
-    <DigiteSeuNome />
+    {/*<DigiteSeuNome />*/}
+
+
+    {/*<DimensoesFixas />*/}
       
-      
+    {/*<Mega qtDeNumeros = {7} /> */} 
       
       
       {/*  <UsuarioLogado usuario={ {nome: 'teste', email: 'teste@teste.com'}} />
@@ -64,5 +104,16 @@ const estilos = StyleSheet.create({
 
   fonte: {
     fontSize: 40,
+  },
+
+  calculadora: {
+
+    flex: 1,
+
+  },
+
+  botao: {
+    flexDirection: "row",
+    flexWrap: "wrap",
   },
 });
