@@ -26,8 +26,8 @@ export default props => {
 
         <View style = {estilo.display}>
 
-<Text style = {estilo.displayValue}
-numberOfLines={1}>
+<Text style = {estilo.displayValue}  numberOfLines = {1}>
+
     {props.value}
 </Text>
 
